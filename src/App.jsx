@@ -1,10 +1,10 @@
-
+import Logica from "./components/Logica"
 function App() {
  
 
   return (
     <>
-      <h1>validarFomulario</h1>
+      <Logica></Logica>
     </>
   )
 }
