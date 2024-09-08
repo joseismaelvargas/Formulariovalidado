@@ -1,10 +1,11 @@
 import Logica from "./components/Logica"
+import Formulario from "./components/Formulario"
 function App() {
  
 
   return (
     <>
-      <Logica></Logica>
+      <Formulario></Formulario>
     </>
   )
 }
