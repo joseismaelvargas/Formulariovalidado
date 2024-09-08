@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
-
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
 function Logica() {
     const [verificador,setverificador]=useState(true)
     const [nombre,setnombre]=useState("")
@@ -30,16 +32,29 @@ function Logica() {
  }
 
     return (
-        <form action="" onSubmit={enviar} >
-            <input className={verificador?"input":"vacio"} type="text" placeholder='Nombre..' onChange={nombreinput} value={nombre} /><br />
-           
-            <input className= {verificador?"input":"vacio"}type="text" placeholder='Apellido..' value={apellido} onChange={apellidoinput} /><br />
-            <input className={verificador?"input":"vacio"} type="text" placeholder='DNI..' value={dni}  onChange={dniinput} /><br />
-         
-            <button style={{
-                margin:" 10px 100px"
-            }}   type='Submit' className=' btn btn-primary'onSubmit={enviar}>Enviar Formulario</button>
-        </form>
+        <>
+        <Form.Group controlId="formFile" className="mb-3">
+        <Form.Label>Default file input example</Form.Label>
+        <Form.Control type="file" />
+      </Form.Group>
+      <Form.Group controlId="formFileMultiple" className="mb-3">
+        <Form.Label>Multiple files input example</Form.Label>
+        <Form.Control type="file" multiple />
+      </Form.Group>
+      <Form.Group controlId="formFileDisabled" className="mb-3">
+        <Form.Label>Disabled file input example</Form.Label>
+        <Form.Control type="file" disabled />
+      </Form.Group>
+      <Form.Group controlId="formFileSm" className="mb-3">
+        <Form.Label>Small file input example</Form.Label>
+        <Form.Control type="file" size="sm" />
+      </Form.Group>
+      <Form.Group controlId="formFileLg" className="mb-3">
+        <Form.Label>Large file input example</Form.Label>
+        <Form.Control type="file" size="lg" />
+      </Form.Group>
+    </>
+        
     )
 }
 
